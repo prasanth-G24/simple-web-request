@@ -80,15 +80,54 @@ public final class Request
 	
 	Response post(String url) throws MalformedURLException
 	{
+		return post(url, new HashMap<String, String>(), new HashMap<String, String>());
+	}
+	
+	Response post(String url, HashMap<String, String> parameters, String headers) throws MalformedURLException
+	{
+		return post(url, parameters, new HashMap<String, String>());
+	}
+	
+	Response post(String url, String parameters, HashMap<String, String> headers) throws MalformedURLException
+	{
+		return post(url, new HashMap<String, String>(), headers);
+	}
+	
+	Response post(String url, HashMap<String, String> body, HashMap<String, String> headers) throws MalformedURLException
+	{
 		URL requestUrl = null;
 		Response response = new Response();
 		try
 		{
+			if(body.size() > 0)
+			{
+				url = url.concat("?");
+				boolean isFirstIter = true;
+				for(String key : body.keySet())
+				{
+					if(!isFirstIter)
+					{
+						url = url.concat("&" + key + "=" + body.get(key));
+					}
+					else
+					{
+						url = url.concat(key + "=" + body.get(key));
+						isFirstIter = false;
+					}
+				}
+			}
 			requestUrl = new URL(url);
 			HttpURLConnection connection = (HttpURLConnection)requestUrl.openConnection();
-			connection.setRequestMethod("POST");
+			if(headers.size() != 0)
+			{
+				for(String header : headers.keySet())
+				{
+					connection.setRequestProperty(header, headers.get(header));
+				}
+			}
+			connection.setRequestMethod("GET");
 			response.responseText = "";
-			response.statusCode = connection.getResponseCode();
+			response.statusCode = connection.getResponseCode(); 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			String responseLines;
 			while((responseLines = reader.readLine()) != null)
@@ -106,3 +145,4 @@ public final class Request
 		return response;
 	}
 }
+
