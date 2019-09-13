@@ -14,7 +14,8 @@ We can send GET requests in 4 ways:
 import org.simplehttp.Request;
 import org.simplehttp.Response;
 ```
-##GET
+##GET##
+
 **Simple GET**
 ```java
 Request request = new Request();
@@ -47,5 +48,6 @@ headers.put("headername","headervalue");
 Request request = new Request();
 Resposne response = request.get("www.example.com", params, headers);
 ```
-**POST**
+##POST##
+
 The POST method works exactly like the GET method. That is the main advantage of this library. When you want to pass request body, pass it in the same way of passing the request headers in GET.
