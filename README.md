@@ -3,18 +3,18 @@ This project is created for simplifying java HTTP requests. This is inspired fro
 
 This project depends on org.json library. You can get it [here](https://github.com/stleary/JSON-java):
 ##Code snippets
-###HTTP GET
+### HTTP GET
 We can send GET requests in 4 ways:
   *GET without parameters and headers
   *GET with parameters and without headers
   *GET with headers and without parameters
   *GET with both parameters and headers
-##Make sure to import these Classes before compilation! 
+## Make sure to import these Classes before compilation! 
 ```java
 import org.simplehttp.Request;
 import org.simplehttp.Response;
 ```
-##GET
+## GET
 
 **Simple GET**
 ```java
@@ -48,6 +48,6 @@ headers.put("headername","headervalue");
 Request request = new Request();
 Resposne response = request.get("www.example.com", params, headers);
 ```
-##HTTP POST
+## HTTP POST
 
 The POST method works exactly like the GET method. That is the main advantage of this library. When you want to pass request body, pass it in the same way of passing the request headers in GET.
