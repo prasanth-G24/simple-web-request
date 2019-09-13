@@ -7,10 +7,10 @@ This project depends on org.json library. You can get it [here](https://github.c
 
 ### HTTP GET
 We can send GET requests in 4 ways:
-  *GET without parameters and headers
-  *GET with parameters and without headers
-  *GET with headers and without parameters
-  *GET with both parameters and headers
+  * GET without parameters and headers
+  * GET with parameters and without headers
+  * GET with headers and without parameters
+  * GET with both parameters and headers
 ## Make sure to import these Classes before compilation! 
 ```java
 import org.simplehttp.Request;
