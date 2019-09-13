@@ -16,7 +16,6 @@ We can send GET requests in 4 ways:
 import org.simplehttp.Request;
 import org.simplehttp.Response;
 ```
-## GET
 
 **Simple GET**
 ```java
