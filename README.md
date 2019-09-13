@@ -2,7 +2,9 @@
 This project is created for simplifying java HTTP requests. This is inspired from python's request library. You can send http requests with just one line of code. This is still in beta and I will be adding functionalities for PUT and DELETE requests soon. Feel free to contribute to this project. For and doubts reach me at prasanthmaverick@gmail.com.
 
 This project depends on org.json library. You can get it [here](https://github.com/stleary/JSON-java):
-##Code snippets
+
+## Code snippets
+
 ### HTTP GET
 We can send GET requests in 4 ways:
   *GET without parameters and headers
@@ -48,6 +50,6 @@ headers.put("headername","headervalue");
 Request request = new Request();
 Resposne response = request.get("www.example.com", params, headers);
 ```
-## HTTP POST
+### HTTP POST
 
 The POST method works exactly like the GET method. That is the main advantage of this library. When you want to pass request body, pass it in the same way of passing the request headers in GET.
