@@ -12,22 +12,22 @@ import java.util.HashMap;
 public final class Request
 {
 	
-	Response get(String url) throws MalformedURLException
+	public Response get(String url) throws MalformedURLException
 	{
 		return get(url, new HashMap<String, String>(), new HashMap<String, String>());
 	}
 	
-	Response get(String url, HashMap<String, String> parameters, String headers) throws MalformedURLException
+	public Response get(String url, HashMap<String, String> parameters, String headers) throws MalformedURLException
 	{
 		return get(url, parameters, new HashMap<String, String>());
 	}
 	
-	Response get(String url, String parameters, HashMap<String, String> headers) throws MalformedURLException
+	public Response get(String url, String parameters, HashMap<String, String> headers) throws MalformedURLException
 	{
 		return get(url, new HashMap<String, String>(), headers);
 	}
 	
-	Response get(String url, HashMap<String, String> parameters, HashMap<String, String> headers) throws MalformedURLException
+	public Response get(String url, HashMap<String, String> parameters, HashMap<String, String> headers) throws MalformedURLException
 	{
 		URL requestUrl = null;
 		Response response = new Response();
@@ -79,22 +79,22 @@ public final class Request
 		return response;
 	}
 	
-	Response post(String url) throws MalformedURLException
+	public Response post(String url) throws MalformedURLException
 	{
 		return post(url, new HashMap<String, String>(), new HashMap<String, String>());
 	}
 	
-	Response post(String url, HashMap<String, String> parameters, String headers) throws MalformedURLException
+	public Response post(String url, HashMap<String, String> parameters, String headers) throws MalformedURLException
 	{
 		return post(url, parameters, new HashMap<String, String>());
 	}
 	
-	Response post(String url, String parameters, HashMap<String, String> headers) throws MalformedURLException
+	public Response post(String url, String parameters, HashMap<String, String> headers) throws MalformedURLException
 	{
 		return post(url, new HashMap<String, String>(), headers);
 	}
 	
-	Response post(String url, HashMap<String, String> body, HashMap<String, String> headers) throws MalformedURLException
+	public Response post(String url, HashMap<String, String> body, HashMap<String, String> headers) throws MalformedURLException
 	{
 		URL requestUrl = null;
 		Response response = new Response();
