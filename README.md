@@ -53,9 +53,3 @@ Resposne response = request.get("www.example.com", params, headers);
 
 The POST method works exactly like the GET method. That is the main advantage of this library. When you want to pass request body, pass it in the same way as passing the request headers in GET.
 
-## Roadmap
-
-| Date         	| Feature                 	|
-|--------------	|-------------------------	|
-| September 20 	| PUT and DELETE support  	|
-| October 2    	| Specify request timeout 	|
