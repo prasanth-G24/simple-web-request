@@ -1,5 +1,5 @@
 # simple-web-request
-This project is created for simplifying java HTTP requests. This is inspired from python's request library. You can send http requests with just one line of code. This is still in beta and I will be adding functionalities for PUT and DELETE requests soon. Feel free to contribute to this project. For and doubts reach me at prasanthmaverick@gmail.com.
+This project is created for simplifying java HTTP requests. This is inspired from python's request library. You can send http requests with just one line of code. This is still in beta and I will be adding functionalities for PUT and DELETE requests soon. Feel free to contribute to this project.
 
 This project depends on org.json library. You can get it [here](https://github.com/stleary/JSON-java)
 
